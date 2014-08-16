@@ -27,8 +27,11 @@ public class RtspIoHandler extends IoHandlerAdapter {
 				try {
 					requestProcessor.process(rtspRequest, rtspResponse);
 					// Process sucess
-					rtspResponse.setStatusCode(200);
-					rtspResponse.setReason("OK");
+					if (rtspResponse.getStatusCode() == null) {
+						// Set default status
+						rtspResponse.setStatusCode(200);
+						rtspResponse.setReason("OK");
+					}
 				} catch (Exception e) {
 					// Process error
 					rtspResponse.setStatusCode(500);
