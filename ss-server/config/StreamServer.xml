@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StreamServer>
+	<Port>8888</Port>
+	
+	<Request>
+		<ProcessorFactory>com.zhujun.streamserver.server.RtspRequestProcessorFactory</ProcessorFactory>
+	</Request>
+	
+	<Session>
+		<Manager></Manager>
+		<Timeout></Timeout>
+	</Session>
+	
+	<Media>
+		<Dir></Dir>
+	</Media>
+	
+</StreamServer>
