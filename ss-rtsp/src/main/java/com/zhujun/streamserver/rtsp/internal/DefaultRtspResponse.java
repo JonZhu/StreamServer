@@ -19,9 +19,9 @@ import com.zhujun.streamserver.rtsp.consts.RtspChars;
  */
 public class DefaultRtspResponse implements IRtspResponse {
 
-	private Integer statusCode;
+	private Integer statusCode = 200;
 	private String version = RtspChars.VERSION;
-	private String reason;
+	private String reason = "OK";
 	
 	private Map<String, String> headerMap = new HashMap<String, String>();
 	
