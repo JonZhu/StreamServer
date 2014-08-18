@@ -8,6 +8,7 @@ import com.zhujun.streamserver.rtsp.IRtspRequestProcessor;
 import com.zhujun.streamserver.rtsp.IRtspRequestProcessorFactory;
 import com.zhujun.streamserver.rtsp.IRtspResponse;
 import com.zhujun.streamserver.rtsp.RtspProvider;
+import com.zhujun.streamserver.rtsp.consts.RequestHeaders;
 import com.zhujun.streamserver.rtsp.consts.RtspChars;
 import com.zhujun.streamserver.server.config.ConfigLoader;
 import com.zhujun.streamserver.server.util.ClassUtils;
@@ -54,7 +55,7 @@ public class RtspIoHandler extends IoHandlerAdapter {
 	 */
 	private void beforeProcess(IRtspRequest rtspRequest,
 			IRtspResponse rtspResponse) {
-		String cseq = "Cseq";
+		String cseq = RequestHeaders.CSEQ;
 		if (rtspRequest.getHeader(cseq) != null) {
 			rtspResponse.setHeader(cseq, rtspRequest.getHeader(cseq));
 		}
