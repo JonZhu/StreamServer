@@ -8,5 +8,9 @@ package com.zhujun.streamserver.ts;
  * @date 2014-8-19
  */
 public interface ITarget {
-
+	
+	String getHost();
+	
+	Integer getPort();
+	
 }
