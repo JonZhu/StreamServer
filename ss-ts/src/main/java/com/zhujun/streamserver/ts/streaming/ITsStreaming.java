@@ -1,8 +1,9 @@
 /**
  * 
  */
-package com.zhujun.streamserver.ts;
+package com.zhujun.streamserver.ts.streaming;
 
+import com.zhujun.streamserver.ts.ITarget;
 import com.zhujun.streamserver.ts.resource.IResource;
 
 
